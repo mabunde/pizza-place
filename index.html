@@ -39,9 +39,10 @@
                 <!------------------------------>
                 <div class="find">
                     <div class="search">
-                        <p>FIND LOCATION</p>
+                        <p>FIND LOCATION</p><br>
+
                         <div class="text">
-                            <input type="search" placeholder="Search Something Here" />
+                            <input type="search" placeholder="Search Something Here...." />
                             <button>Search</button>
                         </div>
                     </div>
@@ -78,34 +79,38 @@
                 </div>
             </div>
         </div>
-        <div class="orders">
+        <div class="orders" id="orderfirst">
             <div class="order1 row" id="your-order">
                 <div class="col-md-6">
                     <h3>Kindly make your order below</h3>
+                    <br>
                     <form action="" id="my-order">
                         <label for="">Select your pizza size</label>
                         <select class="form-control" name="size" id="size">
-                            <option value="1200">Large @ ksh 1200</option>
-                            <option value="800">Medium @ ksh 800</option>
-                            <option value="650">Small @ ksh 650</option>
+                            <option value="1200">Large</option>
+                            <option value="800">Medium</option>
+                            <option value="650">Small</option>
                         </select><br>
                         <label for="">Choose your preferred toppings</label> <br>
-                        <input value="100" type="checkbox" id="topping">Pepperoni
-                        <input value="100" type="checkbox" id="topping">Mushroom
-                        <input value="100" type="checkbox" id="topping">Extra Cheese
-                        <input value="100" type="checkbox" id="topping">Green Pepper
-                        <input value="100" type="checkbox" id="topping">Onion
-                        <br> <br>
+                        <select class="form-control" id="type">
+                            <option selected disabled>select</option>
+                            <option value="0">Pepperoni</option>
+                            <option value="1">Mushroom</option>
+                            <option value="2">Extra Cheese</option>
+                            <option value="3">Green Pepper</option>
+                            <option value="4">Hawaiian</option>
+                            <option value="6">Onion</option>
+                        </select> <br>
                         <label for="">Select crust type</label>
-                        <select class="form-control" name="" id="crust">
-                            <option value="250" name="crust">stuffed crust @ ksh 250
-                            <option value="350" name="crust">Crispy @ ksh 350
-                            <option value="230" name="crust">Glutten free @ ksh 230
+                        <select class="form-control" name="" id="crust1">
+                            <option value="0" name="crust">stuffed crust
+                            <option value="1" name="crust">Crispy
+                            <option value="2" name="crust">Glutten free
                         </select>
 
                         <br>
                         <label for="">Quantity</label>
-                        <select class="form-control" name="" id="crust">
+                        <select class="form-control" name="" id="qty">
                             <option value="1" name="crust" id="quantity">1
                             <option value="2" name="crust" id="quantity">2
                             <option value="3" name="crust" id="quantity">3
@@ -120,31 +125,51 @@
                         <br>
                         <div class="btn-group">
                             <button class=" btn btn-success" name="button" type="submit" id="submit" value=""
-                                onclick="">Order</button>
+                                onclick="">Add to cart</button>
                         </div>
 
                     </form>
                 </div>
                 <div class="col-md-6">
                     <div id="we-deliver">
-                        <h3>We make deliveries to your door step</h3>
-                        <form id="delivery" class="form-group">
-                            <label for="name">Name</label>
-                            <input class="form-control" type="text" name="" placeholder="Your official name...."
-                                id="name" required="required">
-                            <br>
-                            <label for="location">Location</label>
-                            <input class="form-control" type="text" id="location" placeholder="location...">
-                            <br>
-                            <label for="phonenumber">Phone Number</label>
-                            <input class="form-control" type="telephone" placeholder="+254xxxxxxxx" id="number">
-                            <br>
-                            <div class="btn-group">
-                                <button class="btn btn-success" type="submit" name="button" id="submit">submit</button>
+                        <h3>We make deliveries to your door step!</h3>
+                        <br><br>
+                        <div class="form-group radioBtn">
+                            <label for="delivery">Delivery or Pickup?</label>
+                            <div class="center">
+                                <input type="radio" id="yes" name="delivery">
+                                <label for="no">Delivered</label>
+                                <input type="radio" id="no" name="delivery">
+                                <label for="no">Pickup</label>
                             </div>
+                        </div>
 
-                        </form>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="finalOrder table-responsive container">
+            <table class="table">
+                <thead class="table-danger">
+                    <th>Pizza-Flavors</th>
+                    <th>Size</th>
+                    <th>Crust</th>
+                    <th>Toppings</th>
+                    <th>Quantity</th>
+                    <th id="totalAmntperoder">Total</th>
+
+                </thead>
+                <tr></tr>
+                <tbody>
+                </tbody>
+            </table>
+            <div>
+                <div class="form-group text-center">
+                    <p id="bill"><span id="result"></span></p>
+                    <p id="bill"> <span id="totalCost"></span></p>
+                </div>
+                <div class="form-group text-center">
+                    <input class="btn btn-danger" type="button" id="checkout" value="Proceed to Checkout">
                 </div>
             </div>
         </div>
