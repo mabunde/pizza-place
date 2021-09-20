@@ -248,39 +248,9 @@ button:active {
   background-color: #ea272d;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
-.footer {
-  background-color: #0a0a0a;
-  height: 150px;
-}
-.social ul {
-  display: flex;
-}
-.social ul li a {
-  padding: 15px;
-}
-.social img {
-  height: 15px;
-}
-.footer-menu ul li a {
-  border-left: 3px solid #2e2e2e;
-  color: rgba(255, 255, 255, 0.8);
-}
+
 .navigation-content {
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-}
-.copyright {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: myriad pro;
-  font-weight: 400;
-  font-size: 12px;
-  margin-top: 10px;
-}
-.copyright p {
-  font-family: calibri;
-
-  color: #b9b9b9;
 }
 .new {
   background-image: url(../assets/pizza3.jpg);
@@ -332,8 +302,12 @@ button:active {
 .order,
 .food-one,
 .food-two,
-.food-three,
-.breakfast,
-.flavor {
+.food-three {
   border-radius: 5px;
+}
+.order1 {
+  margin-left: 60px;
+}
+#topping {
+  padding: 10px;
 }
