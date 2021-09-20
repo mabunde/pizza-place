@@ -78,73 +78,77 @@
                 </div>
             </div>
         </div>
-        <div class="order1 row" id="your-order">
-            <div class="col-md-6">
-                <h3>Kindly make your order below</h3>
-                <form action="" id="my-order">
-                    <label for="">Select your pizza size</label>
-                    <select class="form-control" name="size" id="size">
-                        <option value="1200">Large @ ksh 1200</option>
-                        <option value="800">Medium @ ksh 800</option>
-                        <option value="650">Small @ ksh 650</option>
-                    </select><br>
-                    <label for="">Choose your preferred toppings</label> <br>
-                    <input value="100" type="checkbox" id="topping">Pepperoni
-                    <input value="100" type="checkbox" id="topping">Mushroom
-                    <input value="100" type="checkbox" id="topping">Extra Cheese
-                    <input value="100" type="checkbox" id="topping">Green Pepper
-                    <input value="100" type="checkbox" id="topping">Onion
-                    <br> <br>
-                    <label for="">Select crust type</label>
-                    <select class="form-control" name="" id="crust">
-                        <option value="250" name="crust">stuffed crust @ ksh 250
-                        <option value="350" name="crust">Crispy @ ksh 350
-                        <option value="230" name="crust">Glutten free @ ksh 230
-                    </select>
+        <div class="orders">
+            <div class="order1 row" id="your-order">
+                <div class="col-md-6">
+                    <h3>Kindly make your order below</h3>
+                    <form action="" id="my-order">
+                        <label for="">Select your pizza size</label>
+                        <select class="form-control" name="size" id="size">
+                            <option value="1200">Large @ ksh 1200</option>
+                            <option value="800">Medium @ ksh 800</option>
+                            <option value="650">Small @ ksh 650</option>
+                        </select><br>
+                        <label for="">Choose your preferred toppings</label> <br>
+                        <input value="100" type="checkbox" id="topping">Pepperoni
+                        <input value="100" type="checkbox" id="topping">Mushroom
+                        <input value="100" type="checkbox" id="topping">Extra Cheese
+                        <input value="100" type="checkbox" id="topping">Green Pepper
+                        <input value="100" type="checkbox" id="topping">Onion
+                        <br> <br>
+                        <label for="">Select crust type</label>
+                        <select class="form-control" name="" id="crust">
+                            <option value="250" name="crust">stuffed crust @ ksh 250
+                            <option value="350" name="crust">Crispy @ ksh 350
+                            <option value="230" name="crust">Glutten free @ ksh 230
+                        </select>
 
-                    <br>
-                    <label for="">Quantity</label>
-                    <select class="form-control" name="" id="crust">
-                        <option value="1" name="crust" id="quantity">1
-                        <option value="2" name="crust" id="quantity">2
-                        <option value="3" name="crust" id="quantity">3
-                        <option value="4" name="crust" id="quantity">4
-                        <option value="5" name="crust" id="quantity">5
-                        <option value="6" name="crust" id="quantity">6
-                        <option value="7" name="crust" id="quantity">7
-                        <option value="8" name="crust" id="quantity">8
-                        <option value="9" name="crust" id="quantity">9
-                        <option value="10" name="crust" id="quantity">10
-                    </select>
-                    <br>
-                    <div class="btn-group">
-                        <button class=" btn btn-success" name="button" type="submit" id="submit" value=""
-                            onclick="">Order</button>
-                    </div>
-
-                </form>
-            </div>
-            <div class="col-md-6">
-                <div id="we-deliver">
-                    <h3>We make deliveries to your door step</h3>
-                    <form id="delivery" class="form-group">
-                        <label for="name">Name</label>
-                        <input class="form-control" type="text" name="" id="name" required="required">
                         <br>
-                        <label for="location">Location</label>
-                        <input class="form-control" type="text" id="location" placeholder="location...">
-                        <br>
-                        <label for="phonenumber">Phone Number</label>
-                        <input class="form-control" type="tel" placeholder="+254xxxxxxxx" id="number">
+                        <label for="">Quantity</label>
+                        <select class="form-control" name="" id="crust">
+                            <option value="1" name="crust" id="quantity">1
+                            <option value="2" name="crust" id="quantity">2
+                            <option value="3" name="crust" id="quantity">3
+                            <option value="4" name="crust" id="quantity">4
+                            <option value="5" name="crust" id="quantity">5
+                            <option value="6" name="crust" id="quantity">6
+                            <option value="7" name="crust" id="quantity">7
+                            <option value="8" name="crust" id="quantity">8
+                            <option value="9" name="crust" id="quantity">9
+                            <option value="10" name="crust" id="quantity">10
+                        </select>
                         <br>
                         <div class="btn-group">
-                            <button class="btn btn-success" type="submit" name="button" id="submit">submit</button>
+                            <button class=" btn btn-success" name="button" type="submit" id="submit" value=""
+                                onclick="">Order</button>
                         </div>
 
                     </form>
                 </div>
+                <div class="col-md-6">
+                    <div id="we-deliver">
+                        <h3>We make deliveries to your door step</h3>
+                        <form id="delivery" class="form-group">
+                            <label for="name">Name</label>
+                            <input class="form-control" type="text" name="" placeholder="Your official name...."
+                                id="name" required="required">
+                            <br>
+                            <label for="location">Location</label>
+                            <input class="form-control" type="text" id="location" placeholder="location...">
+                            <br>
+                            <label for="phonenumber">Phone Number</label>
+                            <input class="form-control" type="telephone" placeholder="+254xxxxxxxx" id="number">
+                            <br>
+                            <div class="btn-group">
+                                <button class="btn btn-success" type="submit" name="button" id="submit">submit</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
 </body>
 
