@@ -282,6 +282,12 @@ button:active {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.orders {
+  background-image: url(../assets/form.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
 
 /*Customize scroll bar*/
 ::-webkit-scrollbar {
