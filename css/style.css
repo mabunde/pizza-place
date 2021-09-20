@@ -114,13 +114,6 @@ a {
 .second-row {
   display: flex;
 }
-.flavor,
-.breakfast {
-  width: 540px;
-  height: 180px;
-  margin: 10px;
-  background-color: #b1b1b1;
-}
 .third-row {
   display: flex;
 }
@@ -283,10 +276,18 @@ button:active {
   background-repeat: no-repeat;
 }
 .orders {
-  background-image: url(../assets/form.jpeg);
+  /*  */
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 10px;
+}
+#orderfirst {
+  background-color: blue;
+  opacity: 0.8;
+  background-image: url(../assets/bg.jpg);
+}
+label {
+  color: white;
 }
 
 /*Customize scroll bar*/
@@ -316,4 +317,18 @@ button:active {
 }
 #topping {
   padding: 10px;
+}
+#crust {
+  padding: 20px;
+}
+#we-deliver h3 {
+  text-align: center;
+  color: white;
+}
+#your-order {
+  text-align: center;
+  color: white;
+}
+.center {
+  align-content: center;
 }
