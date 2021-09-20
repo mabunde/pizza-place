@@ -9,7 +9,7 @@ $(document).ready(function () {
         name +
         "  . Your order has been successfuly received and Your order will be delivered to " +
         location +
-        " within one 30 minutes .The delivery will cost ksh  Thank you for chosing us as your pizza place."
+        " within one 30 minutes .The delivery will cost ksh  Thank you for chosing  pizza place."
     );
   });
 });
