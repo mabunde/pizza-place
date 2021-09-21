@@ -125,8 +125,6 @@ function checkout() {
     actualAdress.reload();
   });
 }
-
-  //display the address for delivery
   $('.radioBtn').change(function () {
       if (document.getElementById("yes").checked) {
           $('.actualAdress').show();
@@ -151,11 +149,7 @@ function checkout() {
           var quantity = parseInt($('#quantity').val());
           var selectedTopping = parseInt($('#topping option:selected').val());
           var placeOrder = new Cart(selectedSize, selectedCrust, selectedTopping);
-
-          //total selling price per of everyh order
-          var yourBill = (placeOrder.getSize() + placeOrder.getCrust() + placeOrder.getTopping()) * quantity;
-
-          //append the data to the table
+          var yourBill = (placeOrder.getSize() + placeOrder.getCrust() + placeOrder.getTopping()) * quantit
           $('.display').show();
           $(".table tbody:last").append("<tr>" +
               "<td>" + $('#type option:selected').text() + "</td>" +
