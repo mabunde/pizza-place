@@ -148,7 +148,6 @@ function checkout() {
           var yourBill = (placeOrder.getSize() + placeOrder.getCrust() + placeOrder.getTopping()) * quantity
           $('.display').show();
           $(".table tbody:last").append("<tr>" +
-              "<td>" + $('#type option:selected').text() + "</td>" +
               "<td>" + $('#size option:selected').text() + "</td>" +
               "<td>" + $('#crust option:selected').text() + "</td>" +
               "<td>" + $('#topping option:selected').text() + "</td>" +
