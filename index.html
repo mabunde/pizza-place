@@ -1,12 +1,12 @@
-<!--doctype html-->
 <html>
 
 <head>
     <meta charset="utf-8">
     <title>Pizza place</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascript/script.js"></script>
 </head>
 
 <body>
@@ -26,7 +26,6 @@
             </div>
         </div>
     </div>
-    <!--------NAVIAGTION-END------------->
     <div class="container-fluid">
         <br><br><br>
         <div class="content">
@@ -36,7 +35,6 @@
                     <p>SUMMER PIZZA</p>
                     <button>HOT & SPICY</button>
                 </div>
-                <!------------------------------>
                 <div class="find">
                     <div class="search">
                         <p>FIND LOCATION</p><br>
@@ -46,7 +44,6 @@
                             <button>Search</button>
                         </div>
                     </div>
-                    <!------------------------------->
                     <div class="order">
                         <a href="#">
                             <font style="color:#F9A609;">ORDER</font> ONLINE
@@ -54,7 +51,6 @@
                     </div>
                 </div>
             </div>
-            <!--2------------------------------------->
             <div class="second-row">
                 <div class="food-one">
                     <div class="name">
@@ -99,13 +95,13 @@
                             <option value="2">Extra Cheese</option>
                             <option value="3">Green Pepper</option>
                             <option value="4">Hawaiian</option>
-                            <option value="6">Onion</option>
+                            <option value="5">Onion</option>
                         </select> <br>
                         <label for="">Select crust type</label>
                         <select class="form-control" name="" id="crust1">
-                            <option value="0" name="crust">stuffed crust
-                            <option value="1" name="crust">Crispy
-                            <option value="2" name="crust">Glutten free
+                            <option value="200" name="crust">stuffed crust
+                            <option value="300" name="crust">Crispy
+                            <option value="250" name="crust">Glutten free
                         </select>
 
                         <br>
@@ -122,41 +118,45 @@
                             <option value="9" name="crust" id="quantity">9
                             <option value="10" name="crust" id="quantity">10
                         </select>
-                        <br>
-                        <div class="btn-group">
-                            <button class=" btn btn-success" name="button" type="submit" id="submit" value=""
-                                onclick="">Add to cart</button>
-                        </div>
+
 
                     </form>
                 </div>
                 <div class="col-md-6">
                     <div id="we-deliver">
+                        <br><br><br><br>
                         <h3>We make deliveries to your door step!</h3>
+                        <h3>At a cost of Ksh 150 only</h3>
                         <br><br>
                         <div class="form-group radioBtn">
                             <label for="delivery">Delivery or Pickup?</label>
                             <div class="center">
                                 <input type="radio" id="yes" name="delivery">
-                                <label for="no">Delivered</label>
+                                <label for="yes">Delivered</label>
                                 <input type="radio" id="no" name="delivery">
                                 <label for="no">Pickup</label>
                             </div>
                         </div>
 
                     </div>
+                    <div class="form-group actualAdress">
+                        <label for="name">Add Your Address</label><br><br>
+                        <input type="text" class="form-control" name="" id="address">
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-success" type="button" id="toCart" value="Add to Cart">
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="finalOrder table-responsive container">
+        <div class="display table-responsive container">
             <table class="table">
                 <thead class="table-danger">
-                    <th>Pizza-Flavors</th>
                     <th>Size</th>
                     <th>Crust</th>
                     <th>Toppings</th>
                     <th>Quantity</th>
-                    <th id="totalAmntperoder">Total</th>
+                    <th id="totalOrder">Total</th>
 
                 </thead>
                 <tr></tr>
@@ -165,11 +165,11 @@
             </table>
             <div>
                 <div class="form-group text-center">
-                    <p id="bill"><span id="result"></span></p>
+                    <p id="bill"><span id="outcome"></span></p>
                     <p id="bill"> <span id="totalCost"></span></p>
                 </div>
                 <div class="form-group text-center">
-                    <input class="btn btn-danger" type="button" id="checkout" value="Proceed to Checkout">
+                    <input class="btn btn-success" type="button" id="checkout" value="checkout">
                 </div>
             </div>
         </div>
