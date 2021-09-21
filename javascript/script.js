@@ -25,13 +25,10 @@ Cart.prototype.getTopping = function () {
       return 100
   }
   else if (this.topping === 4) {
-      return 200
+      return 180
   }
 
 }
-
-
-//getting the price of pizza size
 Cart.prototype.getSize = function () {
 
   var count = $("#topping :selected").length; 
