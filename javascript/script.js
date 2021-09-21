@@ -66,7 +66,7 @@ function totalCal() {
       var total = "Total: Ksh. " + sum + " .00";
       $('#totalCost').text(total)
   }
-  Event.preventDefault()
+  
 
 }
 
@@ -114,6 +114,7 @@ function checkout() {
           $(totalCal);
 
       }
+      Event.preventDefault()
   });
   
   
