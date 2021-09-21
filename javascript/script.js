@@ -91,7 +91,7 @@ Cart.prototype.getSize = function () {
 
 function totalCal() {
   var sum = 0;
-  $("#totalPerOrder").each(function () {
+  $(".totalPerOrder").each(function () {
       var cost = $(this).text();
       if (!isNaN(cost) && cost.length != 0) {
           sum += parseFloat(cost);
@@ -104,9 +104,8 @@ function totalCal() {
       var totalCost = "Total: Ksh. " + bill + " .00";
       $('#outcome').text(result);
       $('#totalCost').text(totalCost);
-      swal({
-          title: "Your order will be delivered to " + address,
-      })
+      alert("Your order will be delivered to " + address) 
+      
 
   } else {
       var total = "Total: Ksh. " + sum + " .00";
@@ -115,15 +114,14 @@ function totalCal() {
 }
 
 function checkout() {
-  swal({
-      title: "Order successfully placed." + "\r\n" + "Order again",  
-  }).then((value) => {
+  alert("Order successfully placed." + "\r\n" + "Order again"  
+).then((value) => {
     actualAdress.reload();
   });
 }
   
   $(document).ready(function () {
-    $('.radioBtn').change(function () {
+    $('.pick').change(function () {
       if (document.getElementById("yes").checked) {
           $('.actualAdress').show();
       } else {
