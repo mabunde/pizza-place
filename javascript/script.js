@@ -149,9 +149,9 @@ function checkout() {
           $('.display').show();
           $(".table tbody:last").append("<tr>" +
               "<td>" + $('#size option:selected').text() + "</td>" +
-              "<td>" + $('#crust option:selected').text() + "</td>" +
-              "<td>" + $('#topping option:selected').text() + "</td>" +
-              "<td>" + $('#quantity').val() + "</td>" +
+              "<td>" + $('#crust1 option:selected').text() + "</td>" +
+              "<td>" + $('#type option:selected').text() + "</td>" +
+              "<td>" + $('#qty').val() + "</td>" +
               "<td><span class='totalOrder'>" + yourBill + "</span></td>" +
               "</tr>");
           $(total);
