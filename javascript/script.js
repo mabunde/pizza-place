@@ -1,7 +1,7 @@
-function Cart(size, crust, toppings) {
+function Cart(size, crust, topping) {
   this.size = size;
   this.crust = crust;
-  this.toppings = toppings;
+  this.topping = topping;
 }
 
 Cart.prototype.getCrust = function () {
@@ -93,7 +93,7 @@ function total() {
   var sum = 0;
   $(".totalOrder").each(function () {
       var cost = $(this).text();
-      if (!isNaN(cost) && value.length != 0) {
+      if (!isNaN(cost) && cost.length != 0) {
           summation += parseFloat(cost);
       }
   });
@@ -128,7 +128,7 @@ function checkout() {
           $('.actualAdress').hide();
       }
   });
-
+  $(document).ready(function () {
   $('#toCart').click(function () {
       var size = $('#size option:selected').val();
       var crust = $('#crust option:selected').val();
@@ -154,7 +154,6 @@ function checkout() {
               "<td>" + $('#topping option:selected').text() + "</td>" +
               "<td>" + $('#quantity').val() + "</td>" +
               "<td><span class='totalOrder'>" + yourBill + "</span></td>" +
-              "<td><input type='button' class='delete-item' value='x'/> </td>" +
               "</tr>");
           $(total);
 
@@ -166,3 +165,4 @@ function checkout() {
   $('#checkout').click(function () {
       checkout();
   });
+});
