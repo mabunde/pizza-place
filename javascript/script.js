@@ -31,7 +31,7 @@ Cart.prototype.getTopping = function () {
 }
 Cart.prototype.getSize = function () {
 
-  var count = $("#topping :selected").length; 
+  var count = $("#type :selected").length; 
 
   if (this.type == 0) {
       if (count === 0) {
@@ -89,12 +89,12 @@ Cart.prototype.getSize = function () {
   }  
 }
 
-function total() {
+function totalCal() {
   var sum = 0;
-  $(".totalOrder").each(function () {
+  $("#totalPerOrder").each(function () {
       var cost = $(this).text();
       if (!isNaN(cost) && cost.length != 0) {
-          summation += parseFloat(cost);
+          sum += parseFloat(cost);
       }
   });
   if (document.getElementById('yes').checked) {
@@ -121,28 +121,30 @@ function checkout() {
     actualAdress.reload();
   });
 }
-  $('.radioBtn').change(function () {
+  
+  $(document).ready(function () {
+    $('.radioBtn').change(function () {
       if (document.getElementById("yes").checked) {
           $('.actualAdress').show();
       } else {
           $('.actualAdress').hide();
       }
   });
-  $(document).ready(function () {
+
   $('#toCart').click(function () {
       var size = $('#size option:selected').val();
       var crust = $('#crust option:selected').val();
-      var quantity = $('#quantity').val();
+      var quantity = $('#qty').val();
       var topping = $('#topping option:selected').val();
 
       if ( size == '' || crust == '' || topping == '' || quantity == '') {
           alert('Fill in all fields to complete an order')
-      } else if (document.getElementById("yes").checked && $('#location').val() == '') {
-          alert('Please fill out your Address')
+      } else if (document.getElementById("yes").checked && $('#address').val() == '') {
+          alert('Please enter your Address')
       } else {
           var selectedSize = parseInt($('#size option:selected').val());
           var selectedCrust = parseInt($('#crust option:selected').val());
-          var quantity = parseInt($('#quantity').val());
+          var quantity = parseInt($('#qty').val());
           var selectedTopping = parseInt($('#topping option:selected').val());
           var placeOrder = new Cart(selectedSize, selectedCrust, selectedTopping);
           var yourBill = (placeOrder.getSize() + placeOrder.getCrust() + placeOrder.getTopping()) * quantity
@@ -152,9 +154,9 @@ function checkout() {
               "<td>" + $('#crust1 option:selected').text() + "</td>" +
               "<td>" + $('#type option:selected').text() + "</td>" +
               "<td>" + $('#qty').val() + "</td>" +
-              "<td><span class='totalOrder'>" + yourBill + "</span></td>" +
+              "<td><span class='totalPerOrder'>" + yourBill + "</span></td>" +
               "</tr>");
-          $(total);
+          $(totalCal);
 
       }
   });
