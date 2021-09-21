@@ -41,7 +41,6 @@ Cart.prototype.getSize = function () {
       else {
           return 1200
       }
-      // alert(count);
   } else if (this.type == 1) {
       if (count === 0) {
           return 500
@@ -50,7 +49,7 @@ Cart.prototype.getSize = function () {
       else {
           return 1400
       }
-      // alert(count);
+
   } else if (this.type == 2) {
       if (count === 0) {
           return 500
@@ -59,7 +58,7 @@ Cart.prototype.getSize = function () {
       else {
           return 2000
       }
-      // alert(count);
+
   } else if (this.type == 3) {
       if (count === 0) {
           return 650
@@ -68,7 +67,7 @@ Cart.prototype.getSize = function () {
       else {
           return 2500
       }
-      // alert(count);
+      
   }  else if (this.type == 4) {
       if (count === 0) {
           return 550
@@ -146,7 +145,7 @@ function checkout() {
           var quantity = parseInt($('#quantity').val());
           var selectedTopping = parseInt($('#topping option:selected').val());
           var placeOrder = new Cart(selectedSize, selectedCrust, selectedTopping);
-          var yourBill = (placeOrder.getSize() + placeOrder.getCrust() + placeOrder.getTopping()) * quantit
+          var yourBill = (placeOrder.getSize() + placeOrder.getCrust() + placeOrder.getTopping()) * quantity
           $('.display').show();
           $(".table tbody:last").append("<tr>" +
               "<td>" + $('#type option:selected').text() + "</td>" +
@@ -157,7 +156,7 @@ function checkout() {
               "<td><span class='totalOrder'>" + yourBill + "</span></td>" +
               "<td><input type='button' class='delete-item' value='x'/> </td>" +
               "</tr>");
-          $(totalBill);
+          $(total);
 
       }
   });
