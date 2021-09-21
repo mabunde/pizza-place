@@ -38,54 +38,9 @@ Cart.prototype.getSize = function () {
           return 650
       } else if (count === 1)
           return 850
-      else {
+      else if (count===2) {
           return 1200
       }
-  } else if (this.type == 1) {
-      if (count === 0) {
-          return 500
-      } else if (count === 1)
-          return 900
-      else {
-          return 1400
-      }
-
-  } else if (this.type == 2) {
-      if (count === 0) {
-          return 500
-      } else if (count === 1)
-          return 1000
-      else {
-          return 2000
-      }
-
-  } else if (this.type == 3) {
-      if (count === 0) {
-          return 650
-      } else if (count === 1)
-          return 1500
-      else {
-          return 2500
-      }
-      
-  }  else if (this.type == 4) {
-      if (count === 0) {
-          return 550
-      } else if (count === 1)
-          return 950
-      else {
-          return 1800
-      }
-  } else if (this.type == 5) {
-      if (count === 0) {
-          return 500
-      } else if (count === 1)
-          return 750
-      else {
-          return 2200
-      }
-  } else {
-      return false;
   }  
 }
 
@@ -101,9 +56,9 @@ function totalCal() {
       var result = "Your order is Ksh. " + sum + " delivery charge is 150ksh";
       var address = document.getElementById("address").value;
       var bill = sum + 150;
-      var totalCost = "Total: Ksh. " + bill + " .00";
+      var totalCost1 = "Total: Ksh. " + bill + " .00";
       $('#outcome').text(result);
-      $('#totalCost').text(totalCost);
+      $('#totalCost').text(totalCost1);
       alert("Your order will be delivered to " + address) 
       
 
@@ -111,6 +66,8 @@ function totalCal() {
       var total = "Total: Ksh. " + sum + " .00";
       $('#totalCost').text(total)
   }
+  Event.preventDefault()
+
 }
 
 function checkout() {
@@ -143,7 +100,7 @@ function checkout() {
           var selectedSize = parseInt($('#size option:selected').val());
           var selectedCrust = parseInt($('#crust option:selected').val());
           var quantity = parseInt($('#qty').val());
-          var selectedTopping = parseInt($('#topping option:selected').val());
+          var selectedTopping = parseInt($('#type option:selected').val());
           var placeOrder = new Cart(selectedSize, selectedCrust, selectedTopping);
           var yourBill = (placeOrder.getSize() + placeOrder.getCrust() + placeOrder.getTopping()) * quantity
           $('.display').show();
